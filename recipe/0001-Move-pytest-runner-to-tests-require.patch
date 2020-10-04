@@ -1,6 +1,6 @@
-From 1246650df9a8e5228ec6f962eb11d5a06dbaff5d Mon Sep 17 00:00:00 2001
+From 3a3dff3507830e2fd17c53c65aad394e40a83af2 Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
-Date: Sat, 3 Oct 2020 13:47:57 -0400
+Date: Sun, 4 Oct 2020 00:02:24 -0400
 Subject: [PATCH] Move pytest-runner to tests-require
 
 ---
