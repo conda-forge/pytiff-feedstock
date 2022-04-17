@@ -12,7 +12,7 @@ source:
     - 0001-Move-pytest-runner-to-tests-require.patch
 
 build:
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
