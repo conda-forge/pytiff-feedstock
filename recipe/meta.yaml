@@ -12,19 +12,19 @@ source:
     - 0001-Move-pytest-runner-to-tests-require.patch
 
 build:
-  number: 6
+  number: 7
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython  <3                             # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - cython
+    - cython <3
     - libtiff
     - numpy
     - pip
