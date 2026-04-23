@@ -12,7 +12,7 @@ source:
     - 0001-Move-pytest-runner-to-tests-require.patch
 
 build:
-  number: 7
+  number: 8
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -22,6 +22,7 @@ requirements:
     - cython  <3                             # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - cython <3
@@ -31,7 +32,6 @@ requirements:
     - python
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
